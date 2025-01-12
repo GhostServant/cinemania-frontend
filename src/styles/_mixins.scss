@@ -1,0 +1,67 @@
+@use './variables' as *;
+
+@mixin button-style(
+  $background,
+  $color: $background-color,
+  $hover-background: darken($background, 10%)
+) {
+  background-color: $background;
+  color: $color;
+  padding: $button-padding;
+  border-radius: $button-border-radius;
+  font-size: $button-font-size;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s;
+
+  &:hover {
+    background-color: $hover-background;
+  }
+}
+
+@mixin rating-star($size: 24px) {
+  width: $size;
+  height: $size;
+  background-size: contain;
+  background-repeat: no-repeat;
+  cursor: pointer;
+  transition: transform 0.3s;
+
+  &:hover {
+    transform: scale(1.2);
+  }
+}
+
+@mixin pagination($active-color, $inactive-color) {
+  list-style: none;
+  display: flex;
+  gap: 8px;
+
+  li {
+    cursor: pointer;
+    padding: 8px 12px;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+
+    &.active {
+      background-color: $active-color;
+      color: $background-color;
+    }
+
+    &:hover:not(.active) {
+      background-color: darken($inactive-color, 10%);
+    }
+  }
+}
+
+@mixin respond-to($breakpoint) {
+  @if $breakpoint == tablet {
+    @media (min-width: $tablet-point) {
+      @content;
+    }
+  } @else if $breakpoint == desktop {
+    @media (min-width: $desktop-point) {
+      @content;
+    }
+  }
+}

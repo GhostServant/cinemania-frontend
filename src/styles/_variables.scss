@@ -1,0 +1,60 @@
+$primary-color: #f87719;
+$secondary-color: #111111;
+$tertiary-color: #282828;
+$quaternary-color: #595959;
+$quinary-color: #b7b7b7;
+$senary-color: #f8f8f8;
+$background-color: #ffffff;
+$linear-gradient-start: linear-gradient(
+  144.81deg,
+  rgb(255, 194, 38) 9.233%,
+  rgb(248, 65, 25) 92.699%
+);
+$linear-gradient-end: linear-gradient(
+  144.81deg,
+  rgb(248, 65, 25) 9.233%,
+  rgba(248, 159, 25, 0.68) 92.699%
+);
+
+$desktop-point: 1280px;
+$tablet-point: 768px;
+$mobile-point: 320px;
+
+$font-family: 'Roboto', sans-serif;
+
+// Desktop font-size
+$desktop-fs-bold: 64px;
+$desktop-fs-medium: 28px;
+$desktop-fs-regular: 20px;
+$desktop-fs-small: 16px;
+$desktop-fs-extra-small: 14px;
+
+// Tablet font-size
+$tablet-fs-bold: 52px;
+$tablet-fs-medium: 24px;
+$tablet-fs-regular: 16px;
+$tablet-fs-small: 14px;
+$tablet-fs-extra-small: 12px;
+
+// Mobile font-size
+$mobile-fs-bold: 40px;
+$mobile-fs-medium: 20px;
+$mobile-fs-regular: 14px;
+$mobile-fs-small: 12px;
+$mobile-fs-extra-small: 10px;
+
+$font-weight-bold: 700;
+$font-weight-medium: 500;
+$font-weight-regular: 400;
+
+$button-padding: 12px 24px;
+$button-border-radius: 7 4px;
+$button-font-size: 16px;
+
+$icon-size: 24px;
+
+$rating-star-color: #f87719;
+$rating-star-empty-color: #b7b7b7;
+
+$pagination-active-color: #f87719;
+$pagination-inactive-color: #b7b7b7;
