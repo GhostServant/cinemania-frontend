@@ -1,29 +1,34 @@
 {
   "files": {
-    "main.css": "/cinemania-frontend/static/css/main.36cc5ccc.css",
-    "main.js": "/cinemania-frontend/static/js/main.9610016c.js",
+    "main.css": "/cinemania-frontend/static/css/main.865317ab.css",
+    "main.js": "/cinemania-frontend/static/js/main.aa64c7f9.js",
     "static/js/264.5c5a6281.chunk.js": "/cinemania-frontend/static/js/264.5c5a6281.chunk.js",
     "static/js/756.59e61c23.chunk.js": "/cinemania-frontend/static/js/756.59e61c23.chunk.js",
     "static/js/320.4f19afcb.chunk.js": "/cinemania-frontend/static/js/320.4f19afcb.chunk.js",
-    "static/css/936.31d6cfe0.chunk.css": "/cinemania-frontend/static/css/936.31d6cfe0.chunk.css",
-    "static/js/936.282204fd.chunk.js": "/cinemania-frontend/static/js/936.282204fd.chunk.js",
-    "static/css/273.31d6cfe0.chunk.css": "/cinemania-frontend/static/css/273.31d6cfe0.chunk.css",
-    "static/js/273.febb043b.chunk.js": "/cinemania-frontend/static/js/273.febb043b.chunk.js",
+    "static/css/372.0528e19d.chunk.css": "/cinemania-frontend/static/css/372.0528e19d.chunk.css",
+    "static/js/372.b8b78949.chunk.js": "/cinemania-frontend/static/js/372.b8b78949.chunk.js",
+    "static/css/339.31d6cfe0.chunk.css": "/cinemania-frontend/static/css/339.31d6cfe0.chunk.css",
+    "static/js/339.b7744c74.chunk.js": "/cinemania-frontend/static/js/339.b7744c74.chunk.js",
     "static/media/logo.svg": "/cinemania-frontend/static/media/logo.9f9df6fb98a5bf15d2fd9df6e2bf1936.svg",
     "static/media/Roboto-Bold.ttf": "/cinemania-frontend/static/media/Roboto-Bold.cb02a42f24299e95adb5.ttf",
     "static/media/Roboto-Medium.ttf": "/cinemania-frontend/static/media/Roboto-Medium.116fcd4fd987818c5d98.ttf",
     "static/media/Roboto-Regular.ttf": "/cinemania-frontend/static/media/Roboto-Regular.5dd918926d41224c8142.ttf",
+    "static/media/404.png": "/cinemania-frontend/static/media/404.a9ba37957b1497fa408b.png",
+    "static/media/dark-1.svg": "/cinemania-frontend/static/media/dark-1.3d41b613b6bc3f6c5e1b400c5b426c91.svg",
+    "static/media/light-2.svg": "/cinemania-frontend/static/media/light-2.845112d9d1745a76b30e5b818fcc394e.svg",
+    "static/media/dark-2.svg": "/cinemania-frontend/static/media/dark-2.13f3c6816a8089e9a3b39c23bb56eb77.svg",
     "index.html": "/cinemania-frontend/index.html",
-    "main.36cc5ccc.css.map": "/cinemania-frontend/static/css/main.36cc5ccc.css.map",
-    "main.9610016c.js.map": "/cinemania-frontend/static/js/main.9610016c.js.map",
+    "main.865317ab.css.map": "/cinemania-frontend/static/css/main.865317ab.css.map",
+    "main.aa64c7f9.js.map": "/cinemania-frontend/static/js/main.aa64c7f9.js.map",
     "264.5c5a6281.chunk.js.map": "/cinemania-frontend/static/js/264.5c5a6281.chunk.js.map",
     "756.59e61c23.chunk.js.map": "/cinemania-frontend/static/js/756.59e61c23.chunk.js.map",
     "320.4f19afcb.chunk.js.map": "/cinemania-frontend/static/js/320.4f19afcb.chunk.js.map",
-    "936.282204fd.chunk.js.map": "/cinemania-frontend/static/js/936.282204fd.chunk.js.map",
-    "273.febb043b.chunk.js.map": "/cinemania-frontend/static/js/273.febb043b.chunk.js.map"
+    "372.0528e19d.chunk.css.map": "/cinemania-frontend/static/css/372.0528e19d.chunk.css.map",
+    "372.b8b78949.chunk.js.map": "/cinemania-frontend/static/js/372.b8b78949.chunk.js.map",
+    "339.b7744c74.chunk.js.map": "/cinemania-frontend/static/js/339.b7744c74.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.36cc5ccc.css",
-    "static/js/main.9610016c.js"
+    "static/css/main.865317ab.css",
+    "static/js/main.aa64c7f9.js"
   ]
 }

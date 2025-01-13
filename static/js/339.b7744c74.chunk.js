@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkfrontend=self.webpackChunkfrontend||[]).push([[339],{484:(a,s,n)=>{n.r(s),n.d(s,{default:()=>d});const e={},t=n.p+"static/media/404.a9ba37957b1497fa408b.png";var c=n(579);const d=()=>(0,c.jsxs)("div",{className:e.container,children:["Page Not Found",(0,c.jsx)("img",{src:t,alt:t,className:e.notfoundImg})]})}}]);
+//# sourceMappingURL=339.b7744c74.chunk.js.map
