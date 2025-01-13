@@ -1,16 +1,29 @@
 {
   "files": {
     "main.css": "/cinemania-frontend/static/css/main.36cc5ccc.css",
-    "main.js": "/cinemania-frontend/static/js/main.ec8b425c.js",
+    "main.js": "/cinemania-frontend/static/js/main.9610016c.js",
+    "static/js/264.5c5a6281.chunk.js": "/cinemania-frontend/static/js/264.5c5a6281.chunk.js",
+    "static/js/756.59e61c23.chunk.js": "/cinemania-frontend/static/js/756.59e61c23.chunk.js",
+    "static/js/320.4f19afcb.chunk.js": "/cinemania-frontend/static/js/320.4f19afcb.chunk.js",
+    "static/css/936.31d6cfe0.chunk.css": "/cinemania-frontend/static/css/936.31d6cfe0.chunk.css",
+    "static/js/936.282204fd.chunk.js": "/cinemania-frontend/static/js/936.282204fd.chunk.js",
+    "static/css/273.31d6cfe0.chunk.css": "/cinemania-frontend/static/css/273.31d6cfe0.chunk.css",
+    "static/js/273.febb043b.chunk.js": "/cinemania-frontend/static/js/273.febb043b.chunk.js",
+    "static/media/logo.svg": "/cinemania-frontend/static/media/logo.9f9df6fb98a5bf15d2fd9df6e2bf1936.svg",
     "static/media/Roboto-Bold.ttf": "/cinemania-frontend/static/media/Roboto-Bold.cb02a42f24299e95adb5.ttf",
     "static/media/Roboto-Medium.ttf": "/cinemania-frontend/static/media/Roboto-Medium.116fcd4fd987818c5d98.ttf",
     "static/media/Roboto-Regular.ttf": "/cinemania-frontend/static/media/Roboto-Regular.5dd918926d41224c8142.ttf",
     "index.html": "/cinemania-frontend/index.html",
     "main.36cc5ccc.css.map": "/cinemania-frontend/static/css/main.36cc5ccc.css.map",
-    "main.ec8b425c.js.map": "/cinemania-frontend/static/js/main.ec8b425c.js.map"
+    "main.9610016c.js.map": "/cinemania-frontend/static/js/main.9610016c.js.map",
+    "264.5c5a6281.chunk.js.map": "/cinemania-frontend/static/js/264.5c5a6281.chunk.js.map",
+    "756.59e61c23.chunk.js.map": "/cinemania-frontend/static/js/756.59e61c23.chunk.js.map",
+    "320.4f19afcb.chunk.js.map": "/cinemania-frontend/static/js/320.4f19afcb.chunk.js.map",
+    "936.282204fd.chunk.js.map": "/cinemania-frontend/static/js/936.282204fd.chunk.js.map",
+    "273.febb043b.chunk.js.map": "/cinemania-frontend/static/js/273.febb043b.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.36cc5ccc.css",
-    "static/js/main.ec8b425c.js"
+    "static/js/main.9610016c.js"
   ]
 }

@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkfrontend=self.webpackChunkfrontend||[]).push([[756],{756:(e,r,a)=>{a.r(r),a.d(r,{default:()=>n});var s=a(579);const n=()=>(0,s.jsx)("div",{className:"library",children:"Library Page"})}}]);
+//# sourceMappingURL=756.59e61c23.chunk.js.map
