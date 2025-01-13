@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/static/css/main.87b88e5f.css",
-    "main.js": "/static/js/main.ec8b425c.js",
-    "static/media/Roboto-Bold.ttf": "/static/media/Roboto-Bold.cb02a42f24299e95adb5.ttf",
-    "static/media/Roboto-Medium.ttf": "/static/media/Roboto-Medium.116fcd4fd987818c5d98.ttf",
-    "static/media/Roboto-Regular.ttf": "/static/media/Roboto-Regular.5dd918926d41224c8142.ttf",
-    "index.html": "/index.html",
-    "main.87b88e5f.css.map": "/static/css/main.87b88e5f.css.map",
-    "main.ec8b425c.js.map": "/static/js/main.ec8b425c.js.map"
+    "main.css": "/cinemania-frontend/static/css/main.36cc5ccc.css",
+    "main.js": "/cinemania-frontend/static/js/main.ec8b425c.js",
+    "static/media/Roboto-Bold.ttf": "/cinemania-frontend/static/media/Roboto-Bold.cb02a42f24299e95adb5.ttf",
+    "static/media/Roboto-Medium.ttf": "/cinemania-frontend/static/media/Roboto-Medium.116fcd4fd987818c5d98.ttf",
+    "static/media/Roboto-Regular.ttf": "/cinemania-frontend/static/media/Roboto-Regular.5dd918926d41224c8142.ttf",
+    "index.html": "/cinemania-frontend/index.html",
+    "main.36cc5ccc.css.map": "/cinemania-frontend/static/css/main.36cc5ccc.css.map",
+    "main.ec8b425c.js.map": "/cinemania-frontend/static/js/main.ec8b425c.js.map"
   },
   "entrypoints": [
-    "static/css/main.87b88e5f.css",
+    "static/css/main.36cc5ccc.css",
     "static/js/main.ec8b425c.js"
   ]
 }
