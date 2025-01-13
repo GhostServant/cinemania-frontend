@@ -1,0 +1,68 @@
+@use './../../styles/variables' as *;
+@use './../../styles//mixins' as *;
+
+.content {
+  display: flex;
+  flex-direction: column;
+}
+
+.headerTop {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 6px 0;
+}
+
+.headerLogoImg {
+  width: 32px;
+  height: 32px;
+  @include respond-to(tablet) {
+    width: 48px;
+    height: 48px;
+  }
+}
+.headerMenuText {
+  text-transform: uppercase;
+  font-size: $mobile-fs-small;
+  color: $quinary-color;
+  line-height: 14px;
+  font-weight: $font-weight-medium;
+}
+
+.headerLogoText {
+  display: none;
+  @include respond-to(tablet) {
+    color: var(--background-color);
+    text-align: center;
+    font-size: $tablet-fs-medium;
+    line-height: 28px;
+    display: block;
+  }
+}
+
+.headerLogo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.navList {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+  @include respond-to(desktop) {
+    gap: 40px;
+  }
+}
+
+.listItem {
+  color: var(--quinary-color);
+  font-size: $tablet-fs-small;
+  font-weight: $font-weight-medium;
+  line-height: 16px;
+  text-transform: uppercase;
+  transition: color 0.3s ease;
+  &:hover {
+    color: $primary-color;
+  }
+}

@@ -12,7 +12,7 @@ const AppRoutes = () => {
   return (
     <Suspense fallback={<Loader />}>
       <Routes>
-        <Route path="/" element={<Layout />}>
+        <Route path={process.env.REACT_APP_BASE_URL} element={<Layout />}>
           <Route index element={<Home />} />
           <Route path="catalog" element={<Catalog />} />
           <Route path="catalog/:id" element={<Catalog />} />

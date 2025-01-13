@@ -1,0 +1,26 @@
+@use './../../styles/variables' as *;
+
+.button {
+  background: $linear-gradient-start;
+  border-radius: 194px;
+  width: 60px;
+  height: 24px;
+  cursor: pointer;
+  border: none;
+}
+
+.content{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 3px;
+}
+
+.reverse{
+  transform: rotate(180deg);
+}
+
+.image{
+  transition: transform 0.3s ease;
+}
+
