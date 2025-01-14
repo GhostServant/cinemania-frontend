@@ -1,0 +1,39 @@
+@use './../../styles/variables' as *;
+@use './../../styles/mixins' as *;
+
+.content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin: 28px 0 40px;
+
+  @include respond-to(tablet) {
+    margin: 60px 0 40px;
+  }
+  @include respond-to(desktop) {
+  }
+}
+.footerText {
+  color: var(--quinary-color);
+  font-size: $mobile-fs-regular;
+  line-height: 16px;
+  max-width: 240px;
+  width: 100%;
+  & span {
+    display: block;
+    margin-top: 8px;
+    @include respond-to(tablet) {
+      display: inline;
+    }
+  }
+  @include respond-to(tablet) {
+    max-width: none;
+    font-size: $tablet-fs-regular;
+    line-height: 19px;
+  }
+  @include respond-to(desktop) {
+    font-size: $desktop-fs-regular;
+    line-height: 19px;
+  }
+}
