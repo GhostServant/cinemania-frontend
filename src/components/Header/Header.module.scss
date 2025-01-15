@@ -5,13 +5,6 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-bottom: 40px;
-  @include respond-to(tablet) {
-    margin-bottom: 52px;
-  }
-  @include respond-to(desktop) {
-    margin-bottom: 80px;
-  }
 }
 
 .headerTop {
@@ -201,12 +194,12 @@
   background: $linear-gradient-start;
   padding: $button-padding;
   border-radius: $button-border-radius;
-  font-size: $desktop-fs-small;
+  font-size: $mobile-fs-small - 1;
   font-weight: $font-weight-medium;
-  line-height: 24px;
+  line-height: 14px;
   color: $secondary-color;
   transition: all 0.3s ease;
-  overflow: hidden; // Чтобы скрыть лишние части псевдоэлементов
+  overflow: hidden;
 
   &::before {
     content: '';
@@ -235,6 +228,15 @@
       opacity: 1;
     }
   }
+
+  @include respond-to(tablet) {
+    font-size: $tablet-fs-small;
+    line-height: 20px;
+  }
+  @include respond-to(desktop) {
+    font-size: $desktop-fs-small;
+    line-height: 24px;
+  }
 }
 
 .contentMore {
@@ -243,9 +245,9 @@
   background-color: transparent;
   border: 1px solid $background-color;
 
-  font-size: $desktop-fs-small;
+  font-size: $mobile-fs-small - 1;
   font-weight: $font-weight-medium;
-  line-height: 24px;
+  line-height: 14px;
   color: $background-color;
   transition: all 0.3s ease;
   &:hover {
@@ -253,6 +255,15 @@
     background-color: $background-color;
     border-color: transparent;
     color: $primary-color;
+  }
+
+  @include respond-to(tablet) {
+    font-size: $tablet-fs-small;
+    line-height: 20px;
+  }
+  @include respond-to(desktop) {
+    font-size: $desktop-fs-small;
+    line-height: 24px;
   }
 }
 

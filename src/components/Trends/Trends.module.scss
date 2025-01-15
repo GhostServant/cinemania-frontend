@@ -1,0 +1,87 @@
+@use './../../styles/variables' as *;
+@use './../../styles/mixins' as *;
+
+.content {
+  margin: 40px 0 32px;
+  @include respond-to(tablet) {
+    margin: 52px 0 44px;
+  }
+  @include respond-to(desktop) {
+    margin: 80px 0 60px;
+  }
+}
+
+.trendsTop{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.trendsTitle{
+  font-size: 28px;
+  font-weight: 500;
+  line-height: 33px;
+  color: var(--background-color);
+}
+
+.trendsAll{
+  font-size: 28px;
+  font-weight: 500;
+  line-height: 33px;
+  color: $primary-color;
+}
+
+.trendsList{
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  column-gap: 16px;
+  margin-top: 28px;
+}
+
+.trendsItem {
+  width: 100%;
+  height: 520px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  color: white;
+  text-align: center;
+  padding: 10px;
+  position: relative;
+  border-radius: 8px;
+  overflow: hidden; /* Обрезаем содержимое по границам */
+  &::after{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+      180.00deg,
+      rgba(0, 0, 0, 0) 63.48%,
+      rgba(0, 0, 0, 0.9) 92.161%
+    );
+    pointer-events: none;
+  }
+}
+.filmDescription{
+  text-align: start;
+  z-index: 998;
+
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 23px;
+}
+
+.filmTitle{
+  color: $background-color;
+  margin-bottom: 10px;
+}
+
+.filmGenres{
+  color: $quinary-color;
+}

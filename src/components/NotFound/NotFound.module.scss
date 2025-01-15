@@ -1,0 +1,91 @@
+@use './../../styles/variables' as *;
+@use './../../styles//mixins' as *;
+
+.container {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 999;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 18px;
+}
+
+.notFound {
+  padding: 23px 33px;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  row-gap: 24px;
+
+  border-radius: 16px;
+  box-shadow: 1px 1px 14px 4px rgba(255, 107, 8, 0.42);
+  background: $secondary-color;
+
+  font-size: $mobile-fs-regular;
+  line-height: 19px;
+  width: 280px;
+  height: 290px;
+
+  @include respond-to(tablet) {
+    width: 610px;
+    height: 400px;
+    font-size: $tablet-fs-medium;
+    line-height: 28px;
+    padding: 15px;
+    justify-content: center;
+    & img {
+      width: 300px;
+      height: 260px;
+      margin: 0 auto;
+    }
+  }
+  @include respond-to(desktop) {
+    width: 700px;
+    height: 400px;
+    padding: 20px;
+    justify-content: center;
+    flex-direction: row;
+    align-items: center;
+    & img {
+      width: 300px;
+      height: 260px;
+      margin: 0 auto;
+    }
+  }
+}
+.notFoundLinks {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.goHome,
+.goBack {
+  padding: $button-padding;
+  border-radius: $button-border-radius;
+  background-color: transparent;
+  border: 1px solid $primary-color;
+
+  font-size: $mobile-fs-small - 1;
+  font-weight: $font-weight-medium;
+  line-height: 14px;
+  color: $background-color;
+  transition: all 0.3s ease;
+  &:hover {
+    transition: all 0.3s ease;
+    background-color: $background-color;
+    border-color: transparent;
+    color: $primary-color;
+  }
+
+  @include respond-to(tablet) {
+    font-size: $tablet-fs-small;
+    line-height: 20px;
+  }
+  @include respond-to(desktop) {
+    font-size: $desktop-fs-small;
+    line-height: 24px;
+  }
+}

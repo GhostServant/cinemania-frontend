@@ -51,7 +51,7 @@ const StarRating = ({ rating, size }) => {
             height="23.000000"
             transform="translate(0.500000 0.500000)"
             fill="white"
-            fill-opacity="0"
+            fillOpacity="0"
           />
         </clipPath>
         <linearGradient
@@ -62,12 +62,8 @@ const StarRating = ({ rating, size }) => {
           id="paint_linear_84_164_0"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#F84119" />
-          <stop
-            offset="1.000000"
-            stop-color="#F89F19"
-            stop-opacity="0.678431"
-          />
+          <stop stopColor="#F84119" />
+          <stop offset="1.000000" stopColor="#F89F19" stopOpacity="0.678431" />
         </linearGradient>
         <linearGradient
           x1="2.782516"
@@ -77,7 +73,7 @@ const StarRating = ({ rating, size }) => {
           id="paint_linear_84_165_0"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#F84119" />
+          <stop stopColor="#F84119" />
           <stop offset="1.000000" stopColor="#F89F19" stopOpacity="0.678431" />
         </linearGradient>
       </defs>
@@ -90,7 +86,7 @@ const StarRating = ({ rating, size }) => {
         fill="#FFFFFF"
         fillOpacity="0"
       />
-      <g clip-path="url(#clip84_163)">
+      <g clipPath="url(#clip84_163)">
         <path
           id="Vector"
           d="M14.43 9.75L12 2.25L9.56 9.75L1.5 9.75L8.06 14.25L5.53 21.75L12 17.06L18.46 21.75L15.93 14.25L22.5 9.75L14.43 9.75Z"
@@ -139,12 +135,8 @@ const StarRating = ({ rating, size }) => {
           id="paint_linear_148_6995_0"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#F84119" />
-          <stop
-            offset="1.000000"
-            stopColor="#F89F19"
-            stopOpacity="0.678431"
-          />
+          <stop stopColor="#F84119" />
+          <stop offset="1.000000" stopColor="#F89F19" stopOpacity="0.678431" />
         </linearGradient>
       </defs>
       <rect
@@ -156,7 +148,7 @@ const StarRating = ({ rating, size }) => {
         fill="#FFFFFF"
         fillOpacity="0"
       />
-      <g clip-path="url(#clip148_6994)">
+      <g clipPath="url(#clip148_6994)">
         <path
           id="Vector"
           d="M10.82 7.31L9 1.68L7.17 7.31L1.12 7.31L6.04 10.68L4.14 16.31L9 12.79L13.85 16.31L11.95 10.68L16.87 7.31L10.82 7.31Z"
@@ -168,11 +160,23 @@ const StarRating = ({ rating, size }) => {
       </g>
     </svg>
   );
-  const stars = [fullStar, fullStar, fullStar, fullStar, halfStar];
+  const stars = [];
+  const fullStarsCount = Math.floor(rating);
+  const hasHalfStar = rating % 1 >= 0.5;
+
+  for (let i = 0; i < 5; i++) {
+    if (i < fullStarsCount) {
+      stars.push(fullStar);
+    } else if (i === fullStarsCount && hasHalfStar) {
+      stars.push(halfStar);
+    } else {
+      stars.push(emptyStar);
+    }
+  }
   return (
     <div className={styles.contentRating}>
-      {stars.map((star) => (
-        <span>{star}</span>
+      {stars.map((star, index) => (
+        <span key={index}>{star}</span>
       ))}
     </div>
   );

@@ -1,19 +1,11 @@
 @use './variables' as *;
 
 body {
-  background-color: var(--secondary-color);
+  background-color: $secondary-color;
   font-family: $font-family;
   font-weight: $font-weight-regular;
   font-size: $mobile-fs-extra-small;
   color: $senary-color;
   min-height: 100vh;
   overflow-x: hidden;
-}
-
-h1 {
-  font-size: $mobile-fs-small;
-}
-
-p {
-  font-size: $mobile-fs-medium;
 }

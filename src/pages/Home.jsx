@@ -1,5 +1,13 @@
+import Trends from './../components/Trends/Trends';
+import UpcomingFilm from './../components/UpcomingFilm/UpcomingFilm';
+
 const Home = () => {
-  return <div className="home">Home Page</div>;
+  return (
+    <div className="home">
+      <Trends />
+      <UpcomingFilm />
+    </div>
+  );
 };
 
 export default Home;

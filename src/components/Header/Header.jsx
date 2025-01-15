@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 import ToggleSwitch from './../ToggleSwitch/ToggleSwitch';
 import useWindowWidth from './../../hooks/useWindowWidth';
-import StarRating from '../../styles/StarRating/StarRating';
+import StarRating from '../../containers/StarRating/StarRating';
 
 import Logo from './../../assets/image/icons/logo.svg';
 import { ReactComponent as Star } from './../../assets/image/icons/star.svg';
@@ -50,7 +50,7 @@ const Header = () => {
       <div className={styles.headerContent}>
         <div className={styles.headerContentDesc}>
           <h2 className={styles.contentTitle}>Quantumania</h2>
-          <StarRating size={'24px'} />
+          <StarRating key={1} rating={4.5} size={'24px'} />
           <p className={styles.contentText}>
             Salt-of-the-earth Cole falls head over heels for enigmatic Sadie —
             but then makes the shocking discovery that she’s a secret agent.

@@ -17,8 +17,8 @@ const AppRoutes = () => {
           <Route path="catalog" element={<Catalog />} />
           <Route path="catalog/:id" element={<Catalog />} />
           <Route path="library" element={<Library />} />
-          <Route path="*" element={<NotFound />} />
         </Route>
+        <Route path="*" element={<NotFound />} />
       </Routes>
     </Suspense>
   );
