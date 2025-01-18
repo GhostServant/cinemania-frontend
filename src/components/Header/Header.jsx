@@ -4,7 +4,6 @@ import useWindowWidth from './../../hooks/useWindowWidth';
 import StarRating from '../../containers/StarRating/StarRating';
 
 import Logo from './../../assets/image/icons/logo.svg';
-import { ReactComponent as Star } from './../../assets/image/icons/star.svg';
 
 import styles from './Header.module.scss';
 

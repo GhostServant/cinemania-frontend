@@ -48,14 +48,16 @@ const testData = [
 
 const Trends = () => {
   const [visibleCount, setVisibleCount] = useState(3);
-  const allVisible = () =>{
+  const allVisible = () => {
     setVisibleCount(testData.length);
-  }
+  };
   return (
     <div className={styles.content}>
       <div className={styles.trendsTop}>
         <h2 className={styles.trendsTitle}>WEEKLY TRENDS</h2>
-        <button className={styles.trendsAll} onClick={allVisible}>See all</button>
+        <button className={styles.trendsAll} onClick={allVisible}>
+          See all
+        </button>
       </div>
       <div className={styles.trendsList}>
         {testData.slice(0, visibleCount).map((movie, index) => (

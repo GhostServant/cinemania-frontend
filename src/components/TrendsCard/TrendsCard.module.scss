@@ -3,16 +3,19 @@
 
 .trendsItem {
   width: 100%;
-  height: 520px;
+  height: 380px;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+
   display: flex;
-  justify-content: space-between;
-  align-items: flex-end;
+  align-items: start;
+  flex-direction: column;
+  justify-content: end;
   color: white;
   text-align: center;
   padding: 10px;
+
   position: relative;
   border-radius: 8px;
   overflow: hidden;
@@ -30,19 +33,40 @@
     );
     pointer-events: none;
   }
+  @include respond-to(tablet) {
+    justify-content: space-between;
+    align-items: end;
+    flex-direction: row;
+    height: 480px;
+  }
+  @include respond-to(desktop) {
+    height: 520px;
+  }
 }
 .filmDescription {
   text-align: start;
   z-index: 998;
 
-  font-size: 20px;
-  font-weight: 500;
-  line-height: 23px;
+  font-size: $mobile-fs-small;
+  line-height: 20px;
+  font-weight: $font-weight-medium;
+  @include respond-to(tablet) {
+    font-size: $tablet-fs-extra-small;
+    line-height: 18px;
+  }
+  @include respond-to(desktop) {
+    font-size: $desktop-fs-regular;
+    line-height: 23px;
+  }
 }
 
 .filmTitle {
   color: $background-color;
-  margin-bottom: 10px;
+  margin-bottom: 0;
+  @include multiline-ellipsis();
+  @include respond-to(tablet) {
+    margin-bottom: 10px;
+  }
 }
 
 .filmGenres {

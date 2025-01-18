@@ -168,6 +168,7 @@
   margin: 21px 0 20px 0;
   max-width: 180px;
   width: 100%;
+  @include multiline-ellipsis(4);
   @include respond-to(tablet) {
     font-size: $tablet-fs-small;
     margin: 21px 0 28px 0;

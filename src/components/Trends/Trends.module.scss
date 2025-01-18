@@ -18,22 +18,52 @@
 }
 
 .trendsTitle {
-  font-size: 28px;
-  font-weight: 500;
-  line-height: 33px;
+  font-size: $mobile-fs-medium;
+  font-weight: $font-weight-medium;
+  line-height: 19px;
   color: var(--background-color);
+  @include respond-to(tablet) {
+    font-size: $tablet-fs-medium;
+    line-height: 28px;
+  }
+  @include respond-to(desktop) {
+    font-size: $desktop-fs-medium;
+    line-height: 33px;
+  }
 }
 
 .trendsAll {
-  font-size: 28px;
-  font-weight: 500;
-  line-height: 33px;
+  font-size: $mobile-fs-medium;
+  font-weight: $font-weight-medium;
+  line-height: 19px;
   color: $primary-color;
+  &:hover{
+    text-decoration: underline;
+  }
+  @include respond-to(tablet) {
+    font-size: $tablet-fs-medium;
+    line-height: 28px;
+  }
+  @include respond-to(desktop) {
+    font-size: $desktop-fs-medium;
+    line-height: 33px;
+  }
 }
 
 .trendsList {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 16px;
-  margin-top: 28px;
+  grid-template-columns: repeat(2,1fr);
+  column-gap: 8px;
+  row-gap: 18px;
+  margin-top: 24px;
+  @include respond-to(tablet) {
+    grid-template-columns: repeat(3, 1fr);
+    row-gap: 28px;
+    column-gap: 16px;
+    margin-top: 26px;
+  }
+  @include respond-to(desktop){
+    row-gap: 32px;
+    margin-top: 28px;
+  }
 }

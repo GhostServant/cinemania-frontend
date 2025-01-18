@@ -1,0 +1,130 @@
+@use './../../styles/mixins' as *;
+@use './../../styles/variables' as *;
+
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 24px;
+  @include respond-to(desktop){
+    gap: 28px;
+  }
+}
+
+.upcomingTitle {
+  font-size: $desktop-fs-medium;
+  font-weight: $font-weight-medium;
+  line-height: 33px;
+  text-transform: uppercase;
+  color: var(--background-color);
+}
+
+.upcomingInfo {
+  display: flex;
+  flex-direction: column;
+  @include respond-to(desktop){
+    justify-content: space-between;
+    align-items: start;
+    flex-direction: row;
+    gap: 16px;
+  }
+}
+
+.upcomingImg {
+  object-fit: cover;
+  border-radius: 5px;
+  width: auto;
+}
+
+.upcomingDescription {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+}
+
+.descTitle {
+  font-size: $desktop-fs-medium;
+  font-weight: $font-weight-medium;
+  color: var(--background-color);
+  line-height: 38px;
+  margin: 24px 0 20px;
+  @include respond-to(tablet){
+    margin: 32px 0 24px;
+  }
+  @include respond-to(desktop){
+    margin:0 0 28px;
+  }
+}
+
+.navList {
+  max-width: 250px;
+  width: 100%;
+  gap: 12px;
+  display: grid;
+  grid-template-columns: repeat(1,1fr);
+  @include respond-to(tablet){
+    max-width: 500px;
+    grid-template-columns: repeat(2,1fr);
+  }
+  @include respond-to(desktop){
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    max-width: 260px;
+  }
+
+  .navItem {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: $desktop-fs-small;
+    font-weight: $font-weight-medium;
+    line-height: 19px;
+    .navLabel {
+      color: var(--quinary-color);
+    }
+
+    .navValue {
+      max-width: 110px;
+      width: 100%;
+      text-align: left;
+      color: var(--background-color);
+    }
+  }
+}
+.releaseDateValue{
+  color: $primary-color !important;
+}
+.voteValue{
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 16px;
+  & span{
+    color: $secondary-color !important;
+    background-color: $background-color;
+    border-radius: 5px;
+    align-items: center;
+    padding: 0 6px;
+  }
+}
+
+.aboutTitle {
+  margin: 16px 0 16px;
+  font-size: $desktop-fs-small;
+  font-weight: $font-weight-medium;
+  line-height: 19px;
+  text-transform: uppercase;
+  color: var(--quinary-color);
+}
+
+.aboutText {
+  font-size: $desktop-fs-extra-small;
+  line-height: 20px;
+  color: var(--senary-color);
+  @include multiline-ellipsis(6);
+}
+
+.upcomingBtn {
+  margin-top: 20px;
+  @include gradient-button-style();
+}
