@@ -37,7 +37,7 @@
   font-weight: $font-weight-medium;
   line-height: 19px;
   color: $primary-color;
-  &:hover{
+  &:hover {
     text-decoration: underline;
   }
   @include respond-to(tablet) {
@@ -52,7 +52,7 @@
 
 .trendsList {
   display: grid;
-  grid-template-columns: repeat(2,1fr);
+  grid-template-columns: repeat(2, 1fr);
   column-gap: 8px;
   row-gap: 18px;
   margin-top: 24px;
@@ -62,7 +62,7 @@
     column-gap: 16px;
     margin-top: 26px;
   }
-  @include respond-to(desktop){
+  @include respond-to(desktop) {
     row-gap: 32px;
     margin-top: 28px;
   }

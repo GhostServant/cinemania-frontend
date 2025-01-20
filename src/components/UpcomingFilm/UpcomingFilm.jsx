@@ -12,19 +12,27 @@ const UpcomingFilm = () => {
           <dl className={styles.navList}>
             <div className={styles.navItem}>
               <dt className={styles.navLabel}>Release date</dt>
-              <dd className={`${styles.navValue} ${styles.releaseDateValue}`}>03.03.2023</dd>
+              <dd className={`${styles.navValue} ${styles.releaseDateValue}`}>
+                03.03.2023
+              </dd>
             </div>
             <div className={styles.navItem}>
               <dt className={styles.navLabel}>Vote / Votes</dt>
-              <dd className={`${styles.navValue} ${styles.voteValue}`}><span>7.3</span> / <span>1260</span></dd>
+              <dd className={`${styles.navValue} ${styles.voteValue}`}>
+                <span>7.3</span> / <span>1260</span>
+              </dd>
             </div>
             <div className={styles.navItem}>
               <dt className={styles.navLabel}>Popularity</dt>
-              <dd className={`${styles.navValue} ${styles.popularityValue}`}>99.9</dd>
+              <dd className={`${styles.navValue} ${styles.popularityValue}`}>
+                99.9
+              </dd>
             </div>
             <div className={styles.navItem}>
               <dt className={styles.navLabel}>Genre</dt>
-              <dd className={`${styles.navValue} ${styles.genreValue}`}>Comedy, action</dd>
+              <dd className={`${styles.navValue} ${styles.genreValue}`}>
+                Comedy, action
+              </dd>
             </div>
           </dl>
 

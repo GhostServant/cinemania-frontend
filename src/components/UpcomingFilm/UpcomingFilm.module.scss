@@ -6,7 +6,7 @@
   flex-direction: column;
   align-items: start;
   gap: 24px;
-  @include respond-to(desktop){
+  @include respond-to(desktop) {
     gap: 28px;
   }
 }
@@ -22,7 +22,7 @@
 .upcomingInfo {
   display: flex;
   flex-direction: column;
-  @include respond-to(desktop){
+  @include respond-to(desktop) {
     justify-content: space-between;
     align-items: start;
     flex-direction: row;
@@ -48,11 +48,11 @@
   color: var(--background-color);
   line-height: 38px;
   margin: 24px 0 20px;
-  @include respond-to(tablet){
+  @include respond-to(tablet) {
     margin: 32px 0 24px;
   }
-  @include respond-to(desktop){
-    margin:0 0 28px;
+  @include respond-to(desktop) {
+    margin: 0 0 28px;
   }
 }
 
@@ -61,12 +61,12 @@
   width: 100%;
   gap: 12px;
   display: grid;
-  grid-template-columns: repeat(1,1fr);
-  @include respond-to(tablet){
+  grid-template-columns: repeat(1, 1fr);
+  @include respond-to(tablet) {
     max-width: 500px;
-    grid-template-columns: repeat(2,1fr);
+    grid-template-columns: repeat(2, 1fr);
   }
-  @include respond-to(desktop){
+  @include respond-to(desktop) {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -92,14 +92,14 @@
     }
   }
 }
-.releaseDateValue{
+.releaseDateValue {
   color: $primary-color !important;
 }
-.voteValue{
+.voteValue {
   font-size: 14px;
   font-weight: 500;
   line-height: 16px;
-  & span{
+  & span {
     color: $secondary-color !important;
     background-color: $background-color;
     border-radius: 5px;

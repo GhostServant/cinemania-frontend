@@ -1,14 +1,34 @@
+import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import ToggleSwitch from './../ToggleSwitch/ToggleSwitch';
-import useWindowWidth from './../../hooks/useWindowWidth';
+import ToggleSwitch from '../ToggleSwitch/ToggleSwitch';
+import useWindowWidth from '../../hooks/useWindowWidth';
 import StarRating from '../../containers/StarRating/StarRating';
 
-import Logo from './../../assets/image/icons/logo.svg';
+import Logo from '../../assets/image/icons/logo.svg';
 
 import styles from './Header.module.scss';
 
 const Header = () => {
   const { width } = useWindowWidth();
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (isMenuOpen) {
+        setIsMenuOpen(false);
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, [isMenuOpen]);
 
   return (
     <div className={styles.content}>
@@ -22,7 +42,48 @@ const Header = () => {
           <span className={styles.headerLogoText}>Cinemania</span>
         </div>
         {width < 768 ? (
-          <span className={styles.headerMenuText}>Menu</span>
+          <>
+            <span className={styles.headerMenuText} onClick={toggleMenu}>
+              Menu
+            </span>
+            {isMenuOpen && (
+              <div
+                className={`${styles.dropdownMenu} ${isMenuOpen ? styles.open : ''}`}
+              >
+                <nav className={styles.dropdownMenuNav}>
+                  <ul className={styles.dropdownMenuList}>
+                    <li className={styles.dropdownMenuItem}>
+                      <Link
+                        to=""
+                        className={styles.listItemLink}
+                        onClick={toggleMenu}
+                      >
+                        Home
+                      </Link>
+                    </li>
+                    <li className={styles.dropdownMenuItem}>
+                      <Link
+                        to="catalog"
+                        className={styles.listItemLink}
+                        onClick={toggleMenu}
+                      >
+                        Catalog
+                      </Link>
+                    </li>
+                    <li className={styles.dropdownMenuItem}>
+                      <Link
+                        to="library"
+                        className={styles.listItemLink}
+                        onClick={toggleMenu}
+                      >
+                        My Library
+                      </Link>
+                    </li>
+                  </ul>
+                </nav>
+              </div>
+            )}
+          </>
         ) : (
           <nav className={styles.nav}>
             <ul className={styles.navList}>

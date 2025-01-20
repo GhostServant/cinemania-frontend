@@ -5,8 +5,8 @@ const StarRating = ({ rating, size }) => {
   const { width } = useWindowWidth();
   const fullStar = (
     <svg
-      width={width <= 768 ? '12px' :size}
-      height={width <= 768 ? '12px' :size}
+      width={width <= 768 ? '12px' : size}
+      height={width <= 768 ? '12px' : size}
       viewBox="0 0 22.498 21.0029"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
@@ -36,8 +36,8 @@ const StarRating = ({ rating, size }) => {
   );
   const halfStar = (
     <svg
-      width={width <= 768 ? '12px' :size}
-      height={width <= 768 ? '12px' :size}
+      width={width <= 768 ? '12px' : size}
+      height={width <= 768 ? '12px' : size}
       viewBox="0 0 24 24"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
@@ -109,8 +109,8 @@ const StarRating = ({ rating, size }) => {
   );
   const emptyStar = (
     <svg
-      width={width <= 768 ? '12px' :size}
-      height={width <= 768 ? '12px' :size}
+      width={width <= 768 ? '12px' : size}
+      height={width <= 768 ? '12px' : size}
       viewBox="0 0 18 18"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
