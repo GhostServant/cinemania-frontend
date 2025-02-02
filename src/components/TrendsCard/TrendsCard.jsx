@@ -1,19 +1,19 @@
 import styles from './TrendsCard.module.scss';
 import StarRating from './../../containers/StarRating/StarRating';
 
-const TrendsCard = ({ filmImage, title, genres, rating, year }) => {
+const TrendsCard = ({movie}) => {
   return (
     <div
       className={styles.trendsItem}
-      style={{ backgroundImage: `url(${filmImage})` }}
+      style={{ backgroundImage: `url(${movie.posterUrl})` }}
     >
       <div className={styles.filmDescription}>
-        <h5 className={styles.filmTitle}>{title}</h5>
+        <h5 className={styles.filmTitle}>{movie.nameRu || movie.nameOriginal}</h5>
         <p className={styles.filmGenres}>
-          {genres} | {year}
+          {movie.genres[0]?.genre} | {movie.year} 
         </p>
       </div>
-      <StarRating rating={rating} size={16} />
+      <StarRating rating={movie?.rating/2 || movie?.ratingKinopoisk/2} size={16} />
     </div>
   );
 };

@@ -1,24 +1,53 @@
-import { useState } from 'react';
-import styles from './SearchAndFilter.module.scss';
+import { useEffect, useState } from 'react';
+import MovieList from './../../components/MovieList/MovieList';
+import { getPopularFilms,filterFilmsByYear,searchMovies } from './../../services/api';
+
 import { ReactComponent as Cross } from './../../assets/image/icons/cross.svg';
+
+import styles from './SearchAndFilter.module.scss';
 
 const SearchAndFilter = () => {
   const [search, setSearch] = useState('');
+  const [movies,setMovies] = useState([]);
   const [genre, setGenre] = useState('');
 
-  const handleChange = (e, state) => {
+  const handleChange = async (e, state) => {
     const value = e.target.value;
-    if (state === 'genre') {
+    if (state === 'year') {
       setGenre(value);
+      clearSearch();
+      if(value !== "Year"){
+        const {items} = await filterFilmsByYear(value);
+        setMovies(items);
+      }else{
+        getMovies();
+      }
     } else if (state === 'search') {
       setSearch(value);
     }
   };
+  const getMovies = async () =>{
+    try {
+      const {films} = await getPopularFilms();
+      setMovies(films)
+    } catch (error) {
+      console.log(error);
+    }
+  }
+  const searchFilm = async() => {
+    const {data} = await searchMovies(search);
+    setMovies(data.films)
+  }
   const clearSearch = () => {
     setSearch('');
+    getMovies();
   };
+  useEffect(()=>{
+    getMovies();
+  },[])
   return (
-    <div className={styles.content}>
+    <div className={styles.containerCatalog}>
+      <div className={styles.content}>
       <div className={styles.searchInputContainer}>
         <input
           type="text"
@@ -32,15 +61,15 @@ const SearchAndFilter = () => {
       <select
         className={styles.filterSelect}
         value={genre}
-        onChange={(e) => handleChange(e, 'genre')}
+        onChange={(e) => handleChange(e, 'year')}
       >
-        <option value="">Year</option>
-        <option value="Comedy">1999</option>
-        <option value="Action">2000</option>
-        <option value="Drama">2001</option>
-        <option value="Horror">2002</option>
+        <option value="Year">Year</option>
+        <option value="1999">1999</option>
+        <option value="2000">2000</option>
+        <option value="2001">2001</option>
+        <option value="2002">2002</option>
       </select>
-      <div className={styles.searchIcon}>
+      <div className={styles.searchIcon} onClick={searchFilm}>
         <svg
           width="20"
           height="20"
@@ -68,6 +97,14 @@ const SearchAndFilter = () => {
           />
         </svg>
       </div>
+    </div>
+    {movies.length > 0 
+    ? (<MovieList movies={movies}/>)
+    : (
+      <p className={styles.trendsOps}>OOPS... <br />
+          We are very sorry! <br />
+          We don’t have any results matching your search.</p>
+    )}
     </div>
   );
 };

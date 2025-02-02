@@ -1,26 +1,52 @@
-import axios from 'axios';
+import axiosInstance from './../utils/axiosInstance';
+import { showSuccessMessage,showErrorMessage } from './../utils/notifications';
 
-const API_URL = process.env.REACT_APP_API_URL || 'http://localhost:5000/api';
+export const getPopularFilms = async (type = 'TOP_100_POPULAR_FILMS', page = 1) => {
+  try {
+    const response = await axiosInstance.get('/v2.2/films/top', {
+      params: {
+        type,
+        page,
+      },
+    });
+    if(response.status === 200) showSuccessMessage("Фильмы успешно загружены");
+    return response.data;
+  } catch (error) {
+    showErrorMessage('Ошибка при получении популярных фильмов:');
+    throw error;
+  }
+};
 
-const axiosInstance = axios.create({
-  baseURL: API_URL,
-  timeout: 10000,
-});
-
-axiosInstance.interceptors.request.use(
-  (config) => {
-    console.log(config);
-    return config;
-  },
-  (error) => Promise.reject(error)
-);
-
-axiosInstance.interceptors.response.use(
-  (response) => {
-    console.log(response);
+export const searchMovies = async (keyword,page=1) =>{
+  try {
+    const response = await axiosInstance.get("/v2.1/films/search-by-keyword",{
+      params:{
+        keyword,
+        page
+      }
+    })
+    if(response.status === 200) showSuccessMessage("Фильмы успешно найдены");
     return response;
-  },
-  (error) => Promise.reject(error)
-);
+  } catch (error) {
+    showErrorMessage('Ошибка поиска фильмов:');
+    throw error;
+  }
+}
 
-export default axiosInstance;
+
+export const filterFilmsByYear = async (year, page = 1) => {
+  try {
+    const response = await axiosInstance.get('/v2.2/films', {
+      params: {
+        yearFrom: year,
+        yearTo: year,
+        page,
+      },
+    });
+    if(response.status === 200) showSuccessMessage(`Фильтрация по году ${year}`);
+    return response.data;
+  } catch (error) {
+    showErrorMessage("Ошибка при фильтрации фильмов по году:");
+    throw error;
+  }
+};

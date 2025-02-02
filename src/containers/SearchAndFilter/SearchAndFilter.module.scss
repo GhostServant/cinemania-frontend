@@ -1,6 +1,13 @@
 @use './../../styles/variables' as *;
 @use './../../styles/mixins' as *;
 
+
+.containerCatalog{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .content {
   display: flex;
   align-items: center;
@@ -63,4 +70,11 @@
   line {
     stroke: var(--background-color);
   }
+}
+.trendsOps{
+  text-align: center;
+  font-family: $font-family;
+  font-size: 32px;
+  line-height: 36px;
+  letter-spacing: .8px;
 }
